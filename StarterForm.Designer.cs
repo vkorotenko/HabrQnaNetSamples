@@ -38,6 +38,7 @@
             this.layoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mySqlDataGridToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,7 +98,8 @@
             // databaseToolStripMenuItem
             // 
             this.databaseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.layoutToolStripMenuItem});
+            this.layoutToolStripMenuItem,
+            this.mySqlDataGridToolStripMenuItem});
             this.databaseToolStripMenuItem.Name = "databaseToolStripMenuItem";
             this.databaseToolStripMenuItem.Size = new System.Drawing.Size(102, 29);
             this.databaseToolStripMenuItem.Text = "Database";
@@ -122,6 +124,13 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(164, 34);
             this.aboutToolStripMenuItem.Text = "About";
+            // 
+            // mySqlDataGridToolStripMenuItem
+            // 
+            this.mySqlDataGridToolStripMenuItem.Name = "mySqlDataGridToolStripMenuItem";
+            this.mySqlDataGridToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.mySqlDataGridToolStripMenuItem.Text = "MySqlDataGrid";
+            this.mySqlDataGridToolStripMenuItem.Click += new System.EventHandler(this.mySqlDataGridToolStripMenuItem_Click);
             // 
             // StarterForm
             // 
@@ -150,5 +159,6 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem databaseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem layoutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mySqlDataGridToolStripMenuItem;
     }
 }
