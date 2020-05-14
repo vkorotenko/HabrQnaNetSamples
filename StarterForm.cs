@@ -8,6 +8,7 @@
 
 using System;
 using System.Windows.Forms;
+using Kvn.HabrQnaNetSamples.Database;
 
 namespace Kvn.HabrQnaNetSamples.Controls
 {
@@ -33,7 +34,13 @@ namespace Kvn.HabrQnaNetSamples.Controls
         {
             var tree = new TreeViewBindingForm();
             tree.Show();
-        } 
+        }
         #endregion
+
+        private void layoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new DatabaseLayoutForm();
+            form.Show();
+        }
     }
 }

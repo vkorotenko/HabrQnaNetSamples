@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Code\DataBaseLayoutSource.cs" />
     <Compile Include="Code\TreeSource.cs" />
     <Compile Include="Code\TreeLeaf.cs" />
     <Compile Include="Controls\ComboBoxExampleForm.cs">
@@ -56,6 +57,12 @@
     </Compile>
     <Compile Include="Controls\PlaceholderTextBox.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Database\DatabaseLayoutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Database\DatabaseLayoutForm.Designer.cs">
+      <DependentUpon>DatabaseLayoutForm.cs</DependentUpon>
     </Compile>
     <Compile Include="StarterForm.cs">
       <SubType>Form</SubType>
@@ -74,6 +81,9 @@
     <EmbeddedResource Include="Controls\ComboBoxExampleForm.resx">
       <DependentUpon>ComboBoxExampleForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Database\DatabaseLayoutForm.resx">
+      <DependentUpon>DatabaseLayoutForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -90,6 +100,8 @@
     <EmbeddedResource Include="Controls\TreeViewBindingForm.resx">
       <DependentUpon>TreeViewBindingForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\Kvn.HabrQnaNetSamples.Code.DataBaseLayoutSource+Item.datasource" />
+    <None Include="Properties\DataSources\Kvn.HabrQnaNetSamples.Code.DataBaseLayoutSource.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
