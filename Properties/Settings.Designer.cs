@@ -22,5 +22,17 @@ namespace Kvn.HabrQnaNetSamples.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("mls")]
+        public string mls {
+            get {
+                return ((string)(this["mls"]));
+            }
+            set {
+                this["mls"] = value;
+            }
+        }
     }
 }
