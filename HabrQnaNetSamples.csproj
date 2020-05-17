@@ -163,6 +163,12 @@
     <Compile Include="Code\DataBaseLayoutSource.cs" />
     <Compile Include="Code\TreeSource.cs" />
     <Compile Include="Code\TreeLeaf.cs" />
+    <Compile Include="Controls\BindingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\BindingForm.Designer.cs">
+      <DependentUpon>BindingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ComboBoxExampleForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +210,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\BindingForm.resx">
+      <DependentUpon>BindingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\ComboBoxExampleForm.resx">
       <DependentUpon>ComboBoxExampleForm.cs</DependentUpon>
     </EmbeddedResource>

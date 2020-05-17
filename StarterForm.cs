@@ -48,5 +48,11 @@ namespace Kvn.HabrQnaNetSamples.Controls
             var form = new MySqlDataGridForm();
             form.Show();
         }
+
+        private void bindingFormToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new BindingForm();
+            form.Show();
+        }
     }
 }

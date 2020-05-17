@@ -36,9 +36,10 @@
             this.treeViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.databaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.layoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mySqlDataGridToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mySqlDataGridToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bindingFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,7 +77,8 @@
             // 
             this.controlsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.comboBoxMenuItem,
-            this.treeViewToolStripMenuItem});
+            this.treeViewToolStripMenuItem,
+            this.bindingFormToolStripMenuItem});
             this.controlsToolStripMenuItem.Name = "controlsToolStripMenuItem";
             this.controlsToolStripMenuItem.Size = new System.Drawing.Size(95, 29);
             this.controlsToolStripMenuItem.Text = "Controls";
@@ -84,14 +86,14 @@
             // comboBoxMenuItem
             // 
             this.comboBoxMenuItem.Name = "comboBoxMenuItem";
-            this.comboBoxMenuItem.Size = new System.Drawing.Size(203, 34);
+            this.comboBoxMenuItem.Size = new System.Drawing.Size(270, 34);
             this.comboBoxMenuItem.Text = "ComboBox";
             this.comboBoxMenuItem.Click += new System.EventHandler(this.comboBoxMenuItem_Click);
             // 
             // treeViewToolStripMenuItem
             // 
             this.treeViewToolStripMenuItem.Name = "treeViewToolStripMenuItem";
-            this.treeViewToolStripMenuItem.Size = new System.Drawing.Size(203, 34);
+            this.treeViewToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.treeViewToolStripMenuItem.Text = "TreeView";
             this.treeViewToolStripMenuItem.Click += new System.EventHandler(this.TreeViewSampleClick);
             // 
@@ -107,9 +109,16 @@
             // layoutToolStripMenuItem
             // 
             this.layoutToolStripMenuItem.Name = "layoutToolStripMenuItem";
-            this.layoutToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.layoutToolStripMenuItem.Size = new System.Drawing.Size(234, 34);
             this.layoutToolStripMenuItem.Text = "Layout";
             this.layoutToolStripMenuItem.Click += new System.EventHandler(this.layoutToolStripMenuItem_Click);
+            // 
+            // mySqlDataGridToolStripMenuItem
+            // 
+            this.mySqlDataGridToolStripMenuItem.Name = "mySqlDataGridToolStripMenuItem";
+            this.mySqlDataGridToolStripMenuItem.Size = new System.Drawing.Size(234, 34);
+            this.mySqlDataGridToolStripMenuItem.Text = "MySqlDataGrid";
+            this.mySqlDataGridToolStripMenuItem.Click += new System.EventHandler(this.mySqlDataGridToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -125,12 +134,12 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(164, 34);
             this.aboutToolStripMenuItem.Text = "About";
             // 
-            // mySqlDataGridToolStripMenuItem
+            // bindingFormToolStripMenuItem
             // 
-            this.mySqlDataGridToolStripMenuItem.Name = "mySqlDataGridToolStripMenuItem";
-            this.mySqlDataGridToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.mySqlDataGridToolStripMenuItem.Text = "MySqlDataGrid";
-            this.mySqlDataGridToolStripMenuItem.Click += new System.EventHandler(this.mySqlDataGridToolStripMenuItem_Click);
+            this.bindingFormToolStripMenuItem.Name = "bindingFormToolStripMenuItem";
+            this.bindingFormToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.bindingFormToolStripMenuItem.Text = "BindingForm";
+            this.bindingFormToolStripMenuItem.Click += new System.EventHandler(this.bindingFormToolStripMenuItem_Click);
             // 
             // StarterForm
             // 
@@ -160,5 +169,6 @@
         private System.Windows.Forms.ToolStripMenuItem databaseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem layoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mySqlDataGridToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bindingFormToolStripMenuItem;
     }
 }
