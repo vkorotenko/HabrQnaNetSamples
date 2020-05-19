@@ -7,11 +7,8 @@
 #endregion
 
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 
 namespace Kvn.HabrQnaNetSamples.Controls
@@ -29,7 +26,10 @@ namespace Kvn.HabrQnaNetSamples.Controls
         private void AddBinding()
         {
             // при изменении значения возвращаем значение в модель, простой метод
-            FactorOneTextBox.TextChanged += (o, args) => { _model.FactorOne = int.Parse(FactorOneTextBox.Text); };
+            FactorOneTextBox.TextChanged += (o, args) =>
+            {
+                if (!string.IsNullOrWhiteSpace(FactorOneTextBox.Text)) _model.FactorOne = int.Parse(FactorOneTextBox.Text);
+            };
             // то же самое, но все вынесено в функцию 
             FactorTwoTextBox.TextChanged += FactorTwoTextBox_TextChanged;
             // в принципе тут можно вызвать первоначальный подсчет результата
@@ -42,11 +42,12 @@ namespace Kvn.HabrQnaNetSamples.Controls
             };
         }
 
-        
+
 
         private void FactorTwoTextBox_TextChanged(object sender, System.EventArgs e)
         {
-            _model.FactorTwo = int.Parse(FactorTwoTextBox.Text);
+            if (!string.IsNullOrWhiteSpace(FactorTwoTextBox.Text))
+                _model.FactorTwo = int.Parse(FactorTwoTextBox.Text);
         }
 
         private void FillValues()
@@ -61,10 +62,9 @@ namespace Kvn.HabrQnaNetSamples.Controls
             SourceTwoComboBox.SelectedItem = _model.FactorTwoSelected;
         }
     }
-    public class Model : INotifyPropertyChanged
+    public class Model
     {
         public Action<float> ResultUpdated { get; set; }
-        public Model() { }
         public void LoadData()
         {
             FactorOne = 2;
@@ -102,13 +102,10 @@ namespace Kvn.HabrQnaNetSamples.Controls
             get => _factorOne;
             set
             {
-                SetProperty(ref _factorOne, value);
+                _factorOne = value;
                 Recalculate();
             }
         }
-
-
-
         #endregion
         #region FactorTwo
         private int _factorTwo;
@@ -118,72 +115,30 @@ namespace Kvn.HabrQnaNetSamples.Controls
             get => _factorTwo;
             set
             {
-                SetProperty(ref _factorTwo, value);
+                _factorTwo = value;
                 Recalculate();
             }
         }
 
         #endregion
         #region FactorOneValues
-        private string[] _oneValues;
 
-        public string[] FactorOneValues
-        {
-            get => _oneValues;
-            set => SetProperty(ref _oneValues, value);
-        }
+        public string[] FactorOneValues { get; set; }
+
         #endregion
         #region FactorOneSelected
-        private string _factorOneSelected;
 
-        public string FactorOneSelected
-        {
-            get => _factorOneSelected;
-            set => SetProperty(ref _factorOneSelected, value);
-        }
+        public string FactorOneSelected { get; set; }
+
         #endregion
         #region FactorTwoValues
-        private string[] _twoValueStrings;
 
-        public string[] FactorTwoValues
-        {
-            get => _twoValueStrings;
-            set => SetProperty(ref _twoValueStrings, value);
-        }
+        public string[] FactorTwoValues { get; set; }
+
         #endregion
         #region FactorTwoSelected
-        private string _factorTwoSelected;
 
-        public string FactorTwoSelected
-        {
-            get => _factorTwoSelected;
-            set => SetProperty(ref _factorTwoSelected, value);
-        }
-        #endregion
-
-        #region INotifyPropertyChanged
-        protected bool SetProperty<T>(ref T backingStore, T value,
-            [CallerMemberName] string propertyName = "",
-            Action onChanged = null)
-        {
-            if (EqualityComparer<T>.Default.Equals(backingStore, value))
-                return false;
-
-            backingStore = value;
-            onChanged?.Invoke();
-            OnPropertyChanged(propertyName);
-            return true;
-        }
-
-
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
-        {
-            var changed = PropertyChanged;
-            changed?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+        public string FactorTwoSelected { get; set; }
 
         #endregion
 
