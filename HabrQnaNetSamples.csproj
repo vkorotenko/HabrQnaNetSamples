@@ -163,11 +163,29 @@
     <Compile Include="Code\DataBaseLayoutSource.cs" />
     <Compile Include="Code\TreeSource.cs" />
     <Compile Include="Code\TreeLeaf.cs" />
+    <Compile Include="Controls\AutoCompliteTexBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\AutoCompliteTexBox.Designer.cs">
+      <DependentUpon>AutoCompliteTexBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\BindingForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Controls\BindingForm.Designer.cs">
       <DependentUpon>BindingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PictureBoxCtrl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\PictureBoxCtrlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\PictureBoxCtrlForm.Designer.cs">
+      <DependentUpon>PictureBoxCtrlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TextBoxRound.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\ComboBoxExampleForm.cs">
       <SubType>Form</SubType>
@@ -210,11 +228,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\AutoCompliteTexBox.resx">
+      <DependentUpon>AutoCompliteTexBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\BindingForm.resx">
       <DependentUpon>BindingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ComboBoxExampleForm.resx">
       <DependentUpon>ComboBoxExampleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PictureBoxCtrlForm.resx">
+      <DependentUpon>PictureBoxCtrlForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Database\DatabaseLayoutForm.resx">
       <DependentUpon>DatabaseLayoutForm.cs</DependentUpon>
@@ -267,6 +291,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <None Include="Images\5ec63044d7f03756143167.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

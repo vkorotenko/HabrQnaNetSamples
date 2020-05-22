@@ -59,5 +59,15 @@ namespace Kvn.HabrQnaNetSamples.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _5ec63044d7f03756143167 {
+            get {
+                object obj = ResourceManager.GetObject("5ec63044d7f03756143167", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

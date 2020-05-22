@@ -54,5 +54,17 @@ namespace Kvn.HabrQnaNetSamples.Controls
             var form = new BindingForm();
             form.Show();
         }
+
+        private void autoCompliteTextBoxToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new AutoCompliteTexBox();
+            form.Show();
+        }
+
+        private void pictureBoxCtrlToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new PictureBoxCtrlForm();
+            form.Show();
+        }
     }
 }
