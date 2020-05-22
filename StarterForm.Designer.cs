@@ -36,12 +36,14 @@
             this.treeViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bindingFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.autoCompliteTextBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBoxCtrlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.databaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.layoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mySqlDataGridToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBoxCtrlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.formsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.parameterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +54,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.controlsToolStripMenuItem,
+            this.formsToolStripMenuItem,
             this.databaseToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -115,6 +118,13 @@
             this.autoCompliteTextBoxToolStripMenuItem.Text = "AutoComplete text box";
             this.autoCompliteTextBoxToolStripMenuItem.Click += new System.EventHandler(this.autoCompliteTextBoxToolStripMenuItem_Click);
             // 
+            // pictureBoxCtrlToolStripMenuItem
+            // 
+            this.pictureBoxCtrlToolStripMenuItem.Name = "pictureBoxCtrlToolStripMenuItem";
+            this.pictureBoxCtrlToolStripMenuItem.Size = new System.Drawing.Size(299, 34);
+            this.pictureBoxCtrlToolStripMenuItem.Text = "PictureBoxCtrl";
+            this.pictureBoxCtrlToolStripMenuItem.Click += new System.EventHandler(this.pictureBoxCtrlToolStripMenuItem_Click);
+            // 
             // databaseToolStripMenuItem
             // 
             this.databaseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -149,15 +159,23 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(164, 34);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.aboutToolStripMenuItem.Text = "About";
             // 
-            // pictureBoxCtrlToolStripMenuItem
+            // formsToolStripMenuItem
             // 
-            this.pictureBoxCtrlToolStripMenuItem.Name = "pictureBoxCtrlToolStripMenuItem";
-            this.pictureBoxCtrlToolStripMenuItem.Size = new System.Drawing.Size(299, 34);
-            this.pictureBoxCtrlToolStripMenuItem.Text = "PictureBoxCtrl";
-            this.pictureBoxCtrlToolStripMenuItem.Click += new System.EventHandler(this.pictureBoxCtrlToolStripMenuItem_Click);
+            this.formsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.parameterToolStripMenuItem});
+            this.formsToolStripMenuItem.Name = "formsToolStripMenuItem";
+            this.formsToolStripMenuItem.Size = new System.Drawing.Size(78, 29);
+            this.formsToolStripMenuItem.Text = "Forms";
+            // 
+            // parameterToolStripMenuItem
+            // 
+            this.parameterToolStripMenuItem.Name = "parameterToolStripMenuItem";
+            this.parameterToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.parameterToolStripMenuItem.Text = "Passing parameters";
+            this.parameterToolStripMenuItem.Click += new System.EventHandler(this.parameterToolStripMenuItem_Click);
             // 
             // StarterForm
             // 
@@ -190,5 +208,7 @@
         private System.Windows.Forms.ToolStripMenuItem bindingFormToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem autoCompliteTextBoxToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pictureBoxCtrlToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem formsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem parameterToolStripMenuItem;
     }
 }

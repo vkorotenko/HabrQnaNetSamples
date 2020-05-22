@@ -9,6 +9,7 @@
 using System;
 using System.Windows.Forms;
 using Kvn.HabrQnaNetSamples.Database;
+using Kvn.HabrQnaNetSamples.Forms;
 
 namespace Kvn.HabrQnaNetSamples.Controls
 {
@@ -64,6 +65,12 @@ namespace Kvn.HabrQnaNetSamples.Controls
         private void pictureBoxCtrlToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = new PictureBoxCtrlForm();
+            form.Show();
+        }
+
+        private void parameterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new PassingParamForm();
             form.Show();
         }
     }
