@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Kvn.HabrQnaNetSamples.Controls.DataGridRelated;
 using Kvn.HabrQnaNetSamples.Database;
 using Kvn.HabrQnaNetSamples.Forms;
+using Kvn.HabrQnaNetSamples.Menu;
 
 namespace Kvn.HabrQnaNetSamples.Controls
 {
@@ -78,6 +79,12 @@ namespace Kvn.HabrQnaNetSamples.Controls
         private void columnSettingToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = new ColumnSettingForm();
+            form.Show();
+        }
+
+        private void recentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new RecentForm();
             form.Show();
         }
     }

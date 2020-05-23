@@ -227,6 +227,12 @@
     <Compile Include="Forms\PassingParamForm.Designer.cs">
       <DependentUpon>PassingParamForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu\RecentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\RecentForm.Designer.cs">
+      <DependentUpon>RecentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\20200514124332_Initial.cs" />
     <Compile Include="Migrations\20200514124332_Initial.designer.cs">
       <DependentUpon>20200514124332_Initial.cs</DependentUpon>
@@ -272,6 +278,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PassingParamForm.resx">
       <DependentUpon>PassingParamForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\RecentForm.resx">
+      <DependentUpon>RecentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
