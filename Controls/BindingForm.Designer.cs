@@ -29,17 +29,19 @@
         private void InitializeComponent()
         {
             this.sourceGroupBox = new System.Windows.Forms.GroupBox();
+            this.ResultLabelResult = new System.Windows.Forms.Label();
+            this.ResultLabel = new System.Windows.Forms.Label();
             this.SourceTwoComboBox = new System.Windows.Forms.ComboBox();
             this.FactorTwoTextBox = new System.Windows.Forms.MaskedTextBox();
             this.SourceOneComboBox = new System.Windows.Forms.ComboBox();
             this.FactorOneTextBox = new System.Windows.Forms.MaskedTextBox();
-            this.ResultLabel = new System.Windows.Forms.Label();
-            this.ResultLabelResult = new System.Windows.Forms.Label();
+            this.FiledComboBox = new System.Windows.Forms.ComboBox();
             this.sourceGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // sourceGroupBox
             // 
+            this.sourceGroupBox.Controls.Add(this.FiledComboBox);
             this.sourceGroupBox.Controls.Add(this.ResultLabelResult);
             this.sourceGroupBox.Controls.Add(this.ResultLabel);
             this.sourceGroupBox.Controls.Add(this.SourceTwoComboBox);
@@ -52,6 +54,24 @@
             this.sourceGroupBox.TabIndex = 0;
             this.sourceGroupBox.TabStop = false;
             this.sourceGroupBox.Text = "Исходные данные";
+            // 
+            // ResultLabelResult
+            // 
+            this.ResultLabelResult.AutoSize = true;
+            this.ResultLabelResult.Location = new System.Drawing.Point(81, 159);
+            this.ResultLabelResult.Name = "ResultLabelResult";
+            this.ResultLabelResult.Size = new System.Drawing.Size(51, 20);
+            this.ResultLabelResult.TabIndex = 5;
+            this.ResultLabelResult.Text = "label2";
+            // 
+            // ResultLabel
+            // 
+            this.ResultLabel.AutoSize = true;
+            this.ResultLabel.Location = new System.Drawing.Point(6, 159);
+            this.ResultLabel.Name = "ResultLabel";
+            this.ResultLabel.Size = new System.Drawing.Size(59, 20);
+            this.ResultLabel.TabIndex = 4;
+            this.ResultLabel.Text = "Result:";
             // 
             // SourceTwoComboBox
             // 
@@ -89,23 +109,18 @@
             this.FactorOneTextBox.TabIndex = 0;
             this.FactorOneTextBox.ValidatingType = typeof(int);
             // 
-            // ResultLabel
+            // FiledComboBox
             // 
-            this.ResultLabel.AutoSize = true;
-            this.ResultLabel.Location = new System.Drawing.Point(6, 159);
-            this.ResultLabel.Name = "ResultLabel";
-            this.ResultLabel.Size = new System.Drawing.Size(59, 20);
-            this.ResultLabel.TabIndex = 4;
-            this.ResultLabel.Text = "Result:";
-            // 
-            // ResultLabelResult
-            // 
-            this.ResultLabelResult.AutoSize = true;
-            this.ResultLabelResult.Location = new System.Drawing.Point(81, 159);
-            this.ResultLabelResult.Name = "ResultLabelResult";
-            this.ResultLabelResult.Size = new System.Drawing.Size(51, 20);
-            this.ResultLabelResult.TabIndex = 5;
-            this.ResultLabelResult.Text = "label2";
+            this.FiledComboBox.Enabled = true;
+            this.FiledComboBox.FormattingEnabled = true;
+            this.FiledComboBox.Items.AddRange(new object[] {
+            "Первая строка",
+            "Вторая строка ",
+            "Третья строка"});
+            this.FiledComboBox.Location = new System.Drawing.Point(85, 101);
+            this.FiledComboBox.Name = "FiledComboBox";
+            this.FiledComboBox.Size = new System.Drawing.Size(272, 28);
+            this.FiledComboBox.TabIndex = 6;
             // 
             // BindingForm
             // 
@@ -130,5 +145,6 @@
         private System.Windows.Forms.ComboBox SourceTwoComboBox;
         private System.Windows.Forms.Label ResultLabelResult;
         private System.Windows.Forms.Label ResultLabel;
+        private System.Windows.Forms.ComboBox FiledComboBox;
     }
 }
